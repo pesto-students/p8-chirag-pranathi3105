@@ -29,3 +29,5 @@ This is the overview, but there are four layers through which this domain name q
 After getting an IP address, resolver stores it in its cache so that next time, if the same query comes then it does not have to go to all these steps again. It can now provide IP address from their cache.
 
 This is all about the steps that is followed to resolve IP address that is associated with the domain name. Have a look below to better understand:
+![image](https://user-images.githubusercontent.com/29429285/208107884-cfc87be3-fa95-47d8-815f-abc0608cdb50.png)
+
