@@ -10,6 +10,7 @@ The second part www.example.com is a domain name. You can relate it to your frie
 
 After hitting the URL, the first thing that needs to happen is to resolve IP address associated with the domain name. DNS helps in resolving this. DNS is like a phone book and helps us to provide the IP address that is associated with the domain name just like our phone book gives a mobile number which is associated with the person’s name.
     
+![URL](https://user-images.githubusercontent.com/29429285/208106426-8655edc1-e695-4fff-8150-3f216d1f4e31.png)
 
 This is the overview, but there are four layers through which this domain name query goes through. Let’s understand the steps:
 
