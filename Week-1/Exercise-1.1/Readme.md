@@ -1,6 +1,7 @@
 What happens when user enter the Url in the browser
+--------------------------------------------------------------------
 Let’s take an example:
-
+--------------------------------------------------------
 https://www.example.com/page1
 
 Here, the first part is ‘https’. This basically tells the browser which protocol it should use. It can be http, https, ftp, etc. A protocol is a set of rules that browser use for communication over the network. 'https' is basically a secure version, i.e. information is exchanged in a secure way.
