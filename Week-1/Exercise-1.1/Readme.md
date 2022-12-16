@@ -1,6 +1,6 @@
-What happens when user enter the Url in the browser
+**What happens when user enter the Url in the browser**
 --------------------------------------------------------------------
-Let’s take an example:
+**Let’s take an example:**
 --------------------------------------------------------
 https://www.example.com/page1
 
@@ -29,5 +29,39 @@ This is the overview, but there are four layers through which this domain name q
 After getting an IP address, resolver stores it in its cache so that next time, if the same query comes then it does not have to go to all these steps again. It can now provide IP address from their cache.
 
 This is all about the steps that is followed to resolve IP address that is associated with the domain name. Have a look below to better understand:
+
 ![image](https://user-images.githubusercontent.com/29429285/208107884-cfc87be3-fa95-47d8-815f-abc0608cdb50.png)
+
+**Functionality of the browser:**
+1. The main function is to retrieve information from the World Wide Web and making it available for users
+2. Visiting any website can be done using a web browser. When a URL is entered in a browser, the web server takes us to that website
+3. To run Java applets and flash content, plugins are available on the web browser
+4. It makes Internet surfing easy as once we reach a website we can easily check the hyperlinks and get more and more useful data online
+5. Browsers user internal cache which gets stored and the user can open the same webpage time and again without losing extra data 
+6. Multiple webpages can be opened at the same time on a web browser
+7. Options like back, forward, reload, stop reload, home, etc. are available on these web browsers, which make using them easy and convenient
+
+**High level components of a browser**
+1. User Interface backend – It can be used for painting basic images like windows or combo box. The backend exposes only a generic platform independent interface. Beneath it, user interface methods are used by the operating system.
+2. JS Interpreter – JavaScript and all other types of scripting is parsed and executed by the inbuilt interpreter.
+3. Networking – Performs implements of HTTP request and response.
+4. Data Storage – All types of data, like cookies are saved locally by the browser. Storage mechanisms like WebSQL, FileSystem, localStorage are also supported by the browser.
+
+**Parser HTML,CSS,etc**
+1. HTML- The word parsing means to divide something into its components and then describe their syntactic roles. The word processing is a familiar word and stands for dealing with something using a standard procedure. Combined these two explain how HTML parser works in generating DOM trees from text/html resources.
+
+This approach defines the parsing rules for HTML documents for determining whether they are syntactically correct or not. The points where the syntax fails to match, a parse error is initiated. At the end of the procedure if a resource is determined to be in the HTML syntax, then it is an HTML document.
+
+OVERVIEW OF THE PARSING MODEL
+
+image.png
+2. CSS-The CSSParser inherits from a generic List of KeyValuePair. The key will be the CSS selector. The value will be another list of key value pairs. The key here is the CSS attribute name. The value will be the CSS property value. I used a generic List instead of a Dictionary because Cascading Style Sheets can have the same selector or attributes listed multiple times.
+public partial class CSSParser : List<KeyValuePair<String,List<KeyValuePair<String,String>>>>, ICSSParser
+
+3. XML- An XML parser is a software library or package that provides interfaces for client applications to work with an XML document. The XML Parser is designed to read the XML and create a way for programs to use XML.
+
+XML parser validates the document and check that the document is well formatted.
+
+Let's understand the working of XML parser by the figure given below:
+image.png
 
