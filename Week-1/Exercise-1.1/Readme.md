@@ -93,7 +93,8 @@ Top-level domain servers are divided by site type, i.e., .com, .edu, etc. TLD se
 
 See below for a chart of the DNS server hierarchy:
 
-widget
+
+![image](https://user-images.githubusercontent.com/29429285/208250542-6620bdc2-9b60-49c6-a2c9-79c5b2d6c813.png)
 Hence, if the record cannot be found locally, a full DNS resolution is conducted as follows:
 
 The first point of contact for a full resolution is a root server. As of the writing of this post, 1017 instances of root servers exist.
@@ -105,15 +106,15 @@ The top level domain returns the IP address of the second level domain server.
 The second-level domain server contains the DNS record of the server we are looking for. The second-level domain server returns the IP address to the browser.
 
 A good way to think of this is that a domain name is resolved in reverse:
+![image](https://user-images.githubusercontent.com/29429285/208250753-a9f01031-7b2a-4cd8-a8ac-8231efe28e28.png)
 
-![image](https://user-images.githubusercontent.com/29429285/208250542-6620bdc2-9b60-49c6-a2c9-79c5b2d6c813.png)
 Though not usually visible, there is a dot after the URL which represents the root server. The root server returns the address of a top-level domain server, in this case for an io server.
 
 The io server then returns the address to the Educative DNS server.
 
 Finally, the Educative DNS server returns the IP address to an Educative site.
 
-widget
+![image](https://user-images.githubusercontent.com/29429285/208250811-1e99a125-a349-404c-be60-9c9235d41a4e.png)
 Now that the browser knows the IP address of the server, it can send a request to it.
 
 
@@ -132,17 +133,7 @@ These requests follow a ‘protocol’ or ‘rules of communication’ called Hy
 
 An HTTP request message consists of a request line and headers. The message starts with a request line and is followed by headers. Here’s a sample HTTP request:
 
-GET /path/to/file/index.html HTTP/1.1
-
-Host: www.educative.io
-
-Connection: close
-
-User-agent: Mozilla/5.0
-
-Accept-language: fr
-
-Accept: text/html
+![image](https://user-images.githubusercontent.com/29429285/208250966-01aadcb0-9063-4ead-8ea3-dd4bd87d1433.png)
 The request line consists of a request method, a path, and the HTTP version.
 
 The request method, GET, in the example above tells the server what to do. GET, for example, tells the server that the client wants to get the resource found at the given file path.
@@ -154,37 +145,23 @@ Next come the HTTP headers. Headers allow the client to communicate extra inform
 There are many headers which provide different functions. For example, the connection header indicates whether user is on a HTTP connection type.
 
 The server then sends an HTTP response message. Here’s a sample response message:
-
-HTTP/1.1 200 OK
-
-Connection: close
-
-Date: Tue, 18 Aug 2015 15: 44 : 04 GMT
-
-Server: Apache/2.2.3 (CentOS)
-
-Last-Modified: Tue, 18 Aug 2015 15:11:03 GMT 
-
-Content-Length: 6821
-
-Content-Type: text/html
  
-[The object/file that was requested]
+![image](https://user-images.githubusercontent.com/29429285/208250917-64ddaf19-82b1-486a-af45-4a18d7fcf74d.png)
 Response messages consist of a status line to start with, followed by a number of headers, followed by a blank line and ends with a resource if any was requested.
 
 The status line consists of the HTTP version and a status code. There are a few types of status codes. A common example is the infamous 404 Not Found status code.
 
 Here’s a quick list of common status codes and what each mean:
 
-200 OK: the request was successful, and the result is appended with the response message.
+1. 200 OK: the request was successful, and the result is appended with the response message.
 
-404 File Not Found: the requested object doesn’t exist on the server.
+2. 404 File Not Found: the requested object doesn’t exist on the server.
 
-400 Bad Request: generic error code that indicates that the request was in a format that the server could not comprehend.
+3. 400 Bad Request: generic error code that indicates that the request was in a format that the server could not comprehend.
 
-500 HTTP Internal Server Error: the request could not be completed because the server encountered some unexpected error.
+4. 500 HTTP Internal Server Error: the request could not be completed because the server encountered some unexpected error.
 
-505 HTTP Version Not Supported: the requested HTTP version is not supported by the server.
+5. 505 HTTP Version Not Supported: the requested HTTP version is not supported by the server.
 
 Next, the browser receives the response, interprets it and displays something accordingly to the user. For instance, if an HTML page is returned, the browser interprets it and displays it accordingly.
 
