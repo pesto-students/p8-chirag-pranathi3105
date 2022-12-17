@@ -54,7 +54,7 @@ This approach defines the parsing rules for HTML documents for determining wheth
 
 OVERVIEW OF THE PARSING MODEL
 
-image.png
+![image](https://user-images.githubusercontent.com/29429285/208249905-bf3fce59-b8bd-4eb5-9b97-e8b6d97198d2.png)
 2. CSS-The CSSParser inherits from a generic List of KeyValuePair. The key will be the CSS selector. The value will be another list of key value pairs. The key here is the CSS attribute name. The value will be the CSS property value. I used a generic List instead of a Dictionary because Cascading Style Sheets can have the same selector or attributes listed multiple times.
 public partial class CSSParser : List<KeyValuePair<String,List<KeyValuePair<String,String>>>>, ICSSParser
 
@@ -63,5 +63,5 @@ public partial class CSSParser : List<KeyValuePair<String,List<KeyValuePair<Stri
 XML parser validates the document and check that the document is well formatted.
 
 Let's understand the working of XML parser by the figure given below:
-image.png
+![image](https://user-images.githubusercontent.com/29429285/208250036-39bcabda-61f3-45aa-8c3e-63b64eee5001.png)
 
