@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    </head>
+    <body>
+        <div class="box-container">
+            <div class="div1 color-box"></div>
+            <div class="div2 color-box"></div>
+            <div class="div3 color-box"></div>
+            <div class="div4 color-box"></div>
+            <div class="text-container">
+                <h1>Hi!</h1>    
+            </div>
+        </div>
+  </body>
+ 
+  <style>
+    .div1
+    {
+        background-color: red;
+        transform-origin: 0% 0%;
+    }
+    .div2
+    {
+        background-color: yellow;
+        transform-origin: 100% 0%;
+    }
+    .div3
+    {
+        background-color: blue;
+        transform-origin: 0% 100%;
+    }
+    .div4
+    {
+        transform-origin: 100% 100%;
+        background-color: green;
+    }
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 50px;
+}
+
+.box-container{
+    width: 200px;
+    height: 200px;
+    grid-template-columns: 0.5fr 0.5fr;
+    display: grid;
+    position: relative;
+}
+
+.color-box{
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s;
+    z-index: 2;
+}
+.text-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.box-container:hover > .div1 {
+    transform-origin: 0% 0%;
+    transform: rotate(90deg);
+}
+
+.box-container:hover > .div2 {
+    transform-origin: 100% 0%;
+    transform: rotate(-90deg);
+}
+
+.box-container:hover > .div3 {
+    transform-origin: 0% 100%;
+    transform: rotate(-90deg);
+}
+
+.box-container:hover > .div4 {
+    transform-origin: 100% 100%;
+    transform: rotate(90deg);
+}
+  </style>
+
+  </html>
