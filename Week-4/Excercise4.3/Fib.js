@@ -19,8 +19,8 @@ const fib = (n)=>({
         }
     }
 }); 
-console.log([ ...fib(8)])
- //for(let num of fib(8))
- //{
- //   console.log(num)
- //}
+//console.log([ ...fib(8)])
+ for(let num of fib(8))
+ {
+       console.log(num)
+ }
