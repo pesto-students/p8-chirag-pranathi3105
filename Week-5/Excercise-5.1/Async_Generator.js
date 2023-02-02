@@ -9,8 +9,9 @@ async function callAsync(item) {
 };
 function* Generator(item)
 {
-  yield collectItems(item)
-  yield prepareFood()
+ let response1 = yield collectItems(item)
+ let response2 =  yield prepareFood(response1)
+  let response3 = yield prepareFood(item)
 }
 function collectItems(items)
 {
@@ -24,8 +25,15 @@ function ServeHot(food)
 {
   return food +"Served Hot"
 }
+
 callAsync("Tea").then(function(result) {
   console.log(result)
 },function(error){
   console.log(error);
 });
+console.log("**********Generator example***********")
+for(let item of Generator("Cofee"))
+{
+console.log(item)
+}
+console.log("**********Async/Await example***********")
