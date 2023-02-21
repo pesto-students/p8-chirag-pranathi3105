@@ -1,5 +1,4 @@
-var head;
- 
+
      class Node {
         constructor(val) {
             this.data = val;
@@ -31,10 +30,8 @@ var head;
         }
         return arr;
     }
- 
-    // Driver Code
      
-        head = new Node(1);
+        var head = new Node(1);
         head.next = new Node(2);
         head.next.next = new Node(3);
         head.next.next.next = new Node(4);
