@@ -30,3 +30,6 @@ let arr = [ -1, 2, 1, -4 ];
 let x = 1;
  
 console.log(solution(arr, x));
+
+//Time complexity: O(N3). 
+//Space Complexity: O(1). 

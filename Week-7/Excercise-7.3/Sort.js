@@ -64,3 +64,6 @@ function sortArr( arr,  n)
       
     // Function calling
     sortArr(arr, n);
+
+//Time Complexity: O(n)
+//Space Complexity: O(1)
