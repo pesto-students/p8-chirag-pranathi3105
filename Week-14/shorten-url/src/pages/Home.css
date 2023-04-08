@@ -1,0 +1,50 @@
+*{
+  text-align: center;
+  color: white;
+}
+h1,input,div{
+  color: black;
+}
+.App{
+  
+  background-color: white;
+}
+.urlInput
+{
+  margin: 10px;
+  width: 50%;
+  border-radius: 0.5em;
+  height: 30px;
+}
+.submitBtn{
+  border-radius: 0.5em;
+  height: 30px;
+  background-color: blue;
+  color: white;
+}
+.urlDiv{
+  display: flex;
+  padding: 0px;
+  margin: 10px;
+}
+.listDiv
+{
+  margin: 10px;
+  width: 100%;
+  height: 50%;
+  color: black;
+}
+.li{
+  padding: 0px;
+  margin-right: 50px;
+}
+.ul{
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  justify-content:right;
+}
+.nav{
+  background-color: black;
+  text-align: left;
+}
