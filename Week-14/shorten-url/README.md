@@ -5,6 +5,13 @@
 
 - cd sorten-url
 
-- npm start
+- npm start 
+**Build the application**
+npm run build
 
-https://user-images.githubusercontent.com/29429285/227223916-93f4b411-38c5-42be-8be9-76c9d2c066ad.mp4
+just upload the build folder in cloudflare application to deploy the application in cloud.
+
+
+
+https://user-images.githubusercontent.com/29429285/231026894-cb7a5d5e-03a9-4100-bfea-a91aefe02776.mp4
+
