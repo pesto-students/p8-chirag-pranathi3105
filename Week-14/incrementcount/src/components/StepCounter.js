@@ -1,6 +1,5 @@
 import { connect } from "react-redux"
-import { increment} from "../redux/increment/counterAction";
-import { reset} from "../redux/reset/resetAction";
+import { increment,reset} from "../redux/increment/counterAction";
 function StepCounter(props){
     return(
         <div>
@@ -17,7 +16,7 @@ function StepCounter(props){
 
 const mapStateToProps = (state,ownProps) =>{
     return {
-        count: state.RootReducer.inc.count
+        count: state.counterReducer.count
     }
 }
 
