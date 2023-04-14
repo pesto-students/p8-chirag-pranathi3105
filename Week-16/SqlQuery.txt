@@ -1,0 +1,32 @@
+
+1. Find the item that has minimum weight.
+
+  SELECT min(item_weight) FROM react.items;
+
+2. Find the different warehouses in “Pune”.
+
+  SELECT w.wh_Name FROM react.cities c
+  left join react.warehouse w on c.cityId = w.wh_city 
+   where c.cityName = 'pune';
+
+3. Find the details of items ordered by a customer “Mr. Patil”.
+
+  SELECT * FROM react.order o
+left join react.items i on o.order_item = i.item_id
+left join react.customer c on o.order_cust = c.cust_id
+ where c.cust_name  = 'Mr. Patil';
+
+4. Find a Warehouse which has maximum stores.
+
+
+5. Find an item which is ordered for a minimum number of times.
+
+
+6. Find the detailed orders given by each customer.
+
+  SELECT * FROM react.order o
+left join react.items i on i.item_id = o.order_item
+LEFT JOIN react.customer c ON c.cust_id = o.order_cust;
+
+
+ 
