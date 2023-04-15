@@ -17,10 +17,21 @@ left join react.customer c on o.order_cust = c.cust_id
  where c.cust_name  = 'Mr. Patil';
 
 4. Find a Warehouse which has maximum stores.
-
+    select * from react.warehouse where wh_City = (
+SELECT st_city FROM (
+SELECT COUNT(st_id)as count, st_City
+FROM react.stores
+GROUP BY st_City
+HAVING COUNT(st_id) > 1) tab1
+order by tab1.count desc
+LIMIT 1)
 
 5. Find an item which is ordered for a minimum number of times.
 
+  SELECT order_item, count(order_id)
+FROM react.order
+GROUP BY order_item
+ORDER BY count(order_id)  limit 1;
 
 6. Find the detailed orders given by each customer.
 
